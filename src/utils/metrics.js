@@ -41,7 +41,6 @@ export function computeKPIs(rows) {
 
   const { period } = findCols(rows[0]);
 
-  // Use last two rows as latest and previous. If period looks like a date, try to sort.
   let data = [...rows];
   if (period) {
     const parsed = data.map((r, i) => {
